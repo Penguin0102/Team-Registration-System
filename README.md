@@ -1,2 +1,4 @@
 # Team-Registration-System
-This is a team registration system project.
+## 项目贡献表
+
+## 项目功能实现简介
