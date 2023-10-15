@@ -14,7 +14,7 @@ type TeamCommitData struct {
 	NewStatus string `json:"new_status" binding:"required"`
 }
 
-func TeamStatusUpdate(c *gin.Context) {
+func TeamCommit(c *gin.Context) {
 	var data TeamCommitData
 	err := c.ShouldBindJSON(&data)
 	if err != nil {

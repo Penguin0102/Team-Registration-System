@@ -29,7 +29,7 @@ func Init(r *gin.Engine) {
 		api3.PUT("/update", teamController.UpdateTeamInformation)
 		api3.DELETE("/kick", teamController.KickTeamMember)
 		api3.DELETE("/delete", teamController.DeleteTeam)
-		api3.PUT("/commit", teamController.TeamStatusUpdate)
+		api3.PUT("/commit", teamController.TeamCommit)
 		api3.PUT("/backout", teamController.BackOut)
 	}
 }
