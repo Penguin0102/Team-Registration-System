@@ -9,8 +9,12 @@ import createteam from '../pages/createteamPage.vue';
 import changepass from '../pages/changepassPage.vue';
 import manageteam from '../pages/manageteamPage.vue';
 import jointeam from '../pages/jointeamPage.vue';
-// import  loginStore  from '../store/loginStore';
+import  loginStore  from '../store/loginStore';
+import pinia from '../store'
+import {storeToRefs} from "pinia"
 
+const loginstore = loginStore(pinia)
+const {loginSession} = storeToRefs(loginstore)
 const routes=[
     {
         path:'/',
@@ -35,7 +39,7 @@ const router = createRouter(
         routes:routes
     }
 )
-/*
+
 router.beforeEach((to,_,next)=>{
    if(loginSession.value=== false){
         if(to.path==="/login" || to.path==="/register"||to.path==="/page"){
@@ -45,5 +49,5 @@ router.beforeEach((to,_,next)=>{
         }
         next();
     }
-});*/
+});
 export default router;
